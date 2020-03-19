@@ -1,0 +1,24 @@
+{
+    "name": "Hairibar.Ragdoll.Animation.Editor",
+    "references": [
+        "GUID:bec8e752780822c47bd2e86145ea1b17",
+        "GUID:a6ad573d92f068a4e810c20e720e8707",
+        "GUID:f88fb04354076c646a4107a491394033",
+        "GUID:5670adaad8cd0454ca2553b97099322f",
+        "GUID:44b53aafba06ce04a98532eb8d5cf8d9",
+        "GUID:01324ef7d01389a46a7e84904ebe0ccd",
+        "GUID:2fe0dc125e595eb4b8259058187a8135",
+        "GUID:7cdcee8a9dd3a3c418d639ad600d438f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
