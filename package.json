@@ -1,21 +1,24 @@
 {
-    "name": "com.hairibar.ragdoll",
-    "version": "1.0.0",
-    "displayName": "Hairibar.Ragdoll",
-    "description": "A framework for making ragdolls and animating them with keyframed animations.",
-    "unity": "2019.1",
-    "author": {
-      "name": "Aitor Iribar"
-    },
-    "type": "library",
-    "dependencies": {
-        "com.hairibar.naughtyattributes": "https://github.com/hairibar/NaughtyAttributes.git#v2.2.1",
-        "com.hairibar.engineextensions": "https://github.com/hairibar/Hairibar.EngineExtensions.git#v0.6.0"
-    },
-    "changelog": "CHANGELOG.md",
-    "keywords": [
-        "Ragdoll",
-        "Active Ragdoll",
-        "Animation"
-    ]
+  "name": "com.hairibar.ragdoll",
+  "version": "0.1.0",
+  "displayName": "Hairibar.Ragdoll",
+  "description": "A framework for making ragdolls and animating them with keyframed animations.",
+  "unity": "2019.1",
+  "author": {
+    "name": "Aitor Iribar"
+  },
+  "type": "library",
+  "dependencies": {
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.animation": "1.0.0",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.hairibar.naughtyattributes": "2.2.1",
+    "com.hairibar.engineextensions": "1.1.0"
+  },
+  "changelog": "CHANGELOG.md",
+  "keywords": [
+    "Ragdoll",
+    "Active Ragdoll",
+    "Animation"
+  ]
 }
