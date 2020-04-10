@@ -2,7 +2,7 @@
 A framework for making ragdolls and animating them with keyframed animations.
 
 ## Dependencies
-- [NaughtyAttributes (my personal fork)](https://github.com/hairibar/NaughtyAttributes)
+- [NaughtyAttributes (my personal fork) v2.2.1](https://github.com/hairibar/NaughtyAttributes)
 - [Hairibar.EngineExtensions v1.1.0](https://github.com/hairibar/Hairibar.EngineExtensions)
 
 # How to install
