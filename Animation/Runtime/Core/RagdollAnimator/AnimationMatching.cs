@@ -4,7 +4,7 @@ namespace Hairibar.Ragdoll.Animation
 {
     internal static class AnimationMatching
     {
-        public static Vector3 GetAcclerationFromPositionSpring(Vector3 currentPos, Vector3 targetPos, Vector3 currentLinearVel, Vector3 targetLinearVel, float alpha, float dampingRatio, float mass, float dt)
+        public static Vector3 GetAccelerationFromPositionSpring(Vector3 currentPos, Vector3 targetPos, Vector3 currentLinearVel, Vector3 targetLinearVel, float alpha, float dampingRatio, float mass, float dt)
         {
             float k = GetSpringStiffnessFromAlpha(alpha, mass, dt);
             float d = GetSpringDampingFromDampingRatio(dampingRatio, k, mass);

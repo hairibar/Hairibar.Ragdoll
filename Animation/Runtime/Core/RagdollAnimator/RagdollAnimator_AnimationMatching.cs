@@ -100,7 +100,7 @@ namespace Hairibar.Ragdoll.Animation
             Rigidbody rigidbody = pair.RagdollBone.Rigidbody;
             AnimatedPose targetPose = pair.currentPose;
 
-            Vector3 acceleration = AnimationMatching.GetAcclerationFromPositionSpring(rigidbody.position, targetPose.worldPosition,
+            Vector3 acceleration = AnimationMatching.GetAccelerationFromPositionSpring(rigidbody.position, targetPose.worldPosition,
                 rigidbody.velocity, pair.poseLinearVelocity, alpha, dampingRatio, rigidbody.mass, dt);
 
             LimitAcceleration(ref acceleration, boneProfile.maxLinearAcceleration);
@@ -164,6 +164,15 @@ namespace Hairibar.Ragdoll.Animation
         #endregion
 
         #region Target Update
+        void ForceAnimatorUpdate()
+        {
+            Animator animator = GetComponent<Animator>();
+            if (animator)
+            {
+                animator.Update(0);
+            }
+        }
+
         void ReadAnimatedPose()
         {
             foreach (AnimatedPair pair in animatedPairs)
@@ -185,7 +194,7 @@ namespace Hairibar.Ragdoll.Animation
         void SnapToTargetPose()
         {
             if (animatedPairs is null) return;
-
+            
             foreach (AnimatedPair pair in animatedPairs)
             {
                 Rigidbody rb = pair.RagdollBone.Rigidbody;

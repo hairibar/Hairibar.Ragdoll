@@ -50,12 +50,21 @@ namespace Hairibar.Ragdoll.Animation
         }
 
 
-        void InitializeProfileTranstitioning()
+        void InitializeProfileTransitioning()
         {
             profileTransitioner = new ValueTransitioner(0, 1);
             profileTransitioner.EndTransition();
 
             previousProfile = currentProfile;
+        }
+
+
+        void InitializePreviousPosesWithCurrentPose()
+        {
+            foreach (AnimatedPair pair in animatedPairs)
+            {
+                pair.previousPose = pair.currentPose;
+            }
         }
     }
 }

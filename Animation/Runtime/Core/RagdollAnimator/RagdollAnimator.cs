@@ -112,15 +112,19 @@ namespace Hairibar.Ragdoll.Animation
             CreateTargetToRagdollMapper();
             CreateAnimatedPairs(mapper.BonePairs);
 
+            ForceAnimatorUpdate();
+            ReadAnimatedPose();
+            InitializePreviousPosesWithCurrentPose();
+
             GatherBoneProfileModifiers();
             InitializeBoneProfileModifiers(boneProfileModifiers, animatedPairs);
 
             GatherTargetPoseModifiers();
             InitializeTargetPoseModifiers(targetPoseModifiers, animatedPairs);
 
-            ReadAnimatedPose();
+            InitializeProfileTransitioning();
 
-            InitializeProfileTranstitioning();
+            SnapToTargetPose();
         }
 
         void OnEnable()
