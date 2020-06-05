@@ -136,5 +136,10 @@ namespace Hairibar.Ragdoll
             UseNewProfile(_profile);
         }
         #endregion
+
+        void OnDestroy()
+        {
+            UnapplyCurrentProfile();
+        }
     }
 }
