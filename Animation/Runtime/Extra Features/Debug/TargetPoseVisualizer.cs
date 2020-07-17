@@ -7,10 +7,10 @@ namespace Hairibar.Ragdoll.Animation.Debug
     /// <summary>
     /// Draws the animated pose that the RagdollAnimator has read this frame. Not suitable for Release.
     /// </summary>
-    [AddComponentMenu("Ragdoll/Animated Pose Visualizer")]
+    [AddComponentMenu("Ragdoll/Target Pose Visualizer")]
     [RequireComponent(typeof(RagdollAnimator))]
     [RemoveInRelease]
-    public class AnimatedPoseVisualizer : MonoBehaviour, ITargetPoseModifier
+    public class TargetPoseVisualizer : MonoBehaviour, ITargetPoseModifier
     {
         #region Inspector
         [Header("Visual Style")]
