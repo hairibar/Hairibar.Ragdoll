@@ -167,7 +167,7 @@ namespace Hairibar.Ragdoll.Editor
 
             if (hasDuplicates)
             {
-                NaughtyEditorGUI.HelpBox_Layout("There are duplicate pairs.", MessageType.Warning);
+                NaughtyEditorGUI.HelpBox_Layout("There are duplicated bones.", MessageType.Warning);
                 SetIsNotValid();
 
                 if (GUILayout.Button("Fix")) Fix();
