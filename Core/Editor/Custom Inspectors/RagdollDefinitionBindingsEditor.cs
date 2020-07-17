@@ -231,7 +231,7 @@ namespace Hairibar.Ragdoll.Editor
             {
                 if (values.GetArrayElementAtIndex(i).objectReferenceValue == null)
                 {
-                    NaughtyEditorGUI.HelpBox_Layout("All bones must be binded to a ConfigurableJoint.", MessageType.Error);
+                    NaughtyEditorGUI.HelpBox_Layout("All bones must be bound to a ConfigurableJoint.", MessageType.Error);
                     return;
                 }
             }
