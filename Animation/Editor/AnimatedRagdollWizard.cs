@@ -1,8 +1,8 @@
 ﻿using Hairibar.EngineExtensions;
+using Hairibar.Ragdoll.Debug;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Assertions;
-using Hairibar.Ragdoll.Debug;
 
 #pragma warning disable 649
 namespace Hairibar.Ragdoll.Animation.Editor
@@ -49,7 +49,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
 
             void Awake()
             {
-                helpString = "The wizard needs to create a copy of the model GameObject.\n" +
+                helpString = "The wizard needs to create a copy of the GameObject that holds the model, called the Target.\n" +
                     "Assign the model GameObject. In most cases, this will be the imported object with an automatically assigned Animator.";
 
                 modelGameObject = Selection.activeGameObject;
@@ -147,7 +147,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
 
             GameObject CreateCopy()
             {
-                modelGameObject.name = "Model";
+                modelGameObject.name = "Target";
 
                 GameObject copy = Instantiate(modelGameObject);
                 Undo.RegisterCreatedObjectUndo(copy, "");
@@ -351,7 +351,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
         {
             public static DefinitionCreationWizard Display(Data data)
             {
-                var wizard = DisplayWizard<DefinitionCreationWizard>(WIZARD_TITLE + " Step: Definition Creation", "Create Definition", "Use Existing");
+                var wizard = DisplayWizard<DefinitionCreationWizard>(WIZARD_TITLE + " Step: Definition Creation", "Create");
                 wizard.Data = data;
                 return wizard;
             }
@@ -368,7 +368,9 @@ namespace Hairibar.Ragdoll.Animation.Editor
             }
             Data _data;
 
+            public bool useExistingDefinition;
             public string definitionName;
+            public RagdollDefinition existingDefinition;
 
 
             void Awake()
@@ -380,20 +382,74 @@ namespace Hairibar.Ragdoll.Animation.Editor
             protected override bool DrawWizardGUI()
             {
                 SerializedObject so = new SerializedObject(this);
+                SerializedProperty useExisting_Property = so.FindProperty("useExistingDefinition");
+                SerializedProperty existingDefinition_Prop = so.FindProperty("existingDefinition");
 
                 EditorGUI.BeginChangeCheck();
-                EditorGUILayout.PropertyField(so.FindProperty("definitionName"), new GUIContent("Definition Name"));
+
+                EditorGUILayout.PropertyField(useExisting_Property);
+                if (useExisting_Property.boolValue)
+                {
+                    EditorGUILayout.PropertyField(existingDefinition_Prop);
+                }
+                else
+                {
+                    EditorGUILayout.PropertyField(so.FindProperty("definitionName"), new GUIContent("Definition Name"));
+                }
+
                 bool changed = EditorGUI.EndChangeCheck();
 
                 so.ApplyModifiedProperties();
 
+                Validate();
+                createButtonName = useExistingDefinition ? "Use Existing Definition" : "Create New Definition";
+
                 return changed;
             }
 
+            void Validate()
+            {
+                if (useExistingDefinition)
+                {
+                    if (!existingDefinition)
+                    {
+                        isValid = false;
+                        errorString = "No definition was provided.";
+                    }
+                    else if (!RagdollDefinitionValidator.Validate(existingDefinition, false))
+                    {
+                        isValid = false;
+                        errorString = "The provided definition is invalid.";
+                    }
+                    else
+                    {
+                        isValid = true;
+                        errorString = "";
+                    }
+                }
+                else
+                {
+                    isValid = !string.IsNullOrEmpty(definitionName);
+                    errorString = "";
+                }
+            }
 
             void OnWizardCreate()
             {
-                string definitionPath = EditorUtility.SaveFilePanelInProject("Save Ragdoll Definition as...", $"ragdef_{definitionName}", "asset", "afdlmasdf");
+                if (useExistingDefinition)
+                {
+                    OnButtonUseExistingDefinition();
+                }
+                else
+                {
+                    OnButtonCreateNewDefinition();
+                }
+
+            }
+
+            void OnButtonCreateNewDefinition()
+            {
+                string definitionPath = EditorUtility.SaveFilePanelInProject("Save Ragdoll Definition as...", $"RAGDEF_{definitionName}", "asset", "afdlmasdf");
                 Data.profileDirectory = definitionPath.Substring(0, definitionPath.LastIndexOf("/") + 1);
 
                 Data.definition = CreateDefinition(definitionPath);
@@ -404,6 +460,16 @@ namespace Hairibar.Ragdoll.Animation.Editor
 
                 DefinitionFixingWizard.Display(_data);
             }
+
+            void OnButtonUseExistingDefinition()
+            {
+                _data.definition = existingDefinition;
+
+                ComponentCreator.SetUpComponents(_data);
+                SetFinalSelection(_data);
+                Close();
+            }
+
 
             static RagdollDefinition CreateDefinition(string definitionPath)
             {
@@ -431,13 +497,6 @@ namespace Hairibar.Ragdoll.Animation.Editor
                 serializedObject.ApplyModifiedPropertiesWithoutUndo();
             }
 
-
-            void OnWizardOtherButton()
-            {
-                ComponentCreator.SetUpComponents(_data);
-                SetFinalSelection(_data);
-                Close();
-            }
         }
 
         public class DefinitionFixingWizard : ScriptableWizard
