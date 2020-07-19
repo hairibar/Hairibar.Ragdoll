@@ -11,7 +11,7 @@ namespace Hairibar.Ragdoll.Animation
     [AddComponentMenu("Ragdoll/Ragdoll Collision Reaction"), RequireComponent(typeof(RagdollAnimator))]
     public class RagdollCollisionReaction : MonoBehaviour, IBoneProfileModifier
     {
-        public LayerMask collisionMask;
+        public LayerMask collisionMask = -1;
         public bool softenPositionMatching = true;
         public bool softenRotationMatching = false;
 
