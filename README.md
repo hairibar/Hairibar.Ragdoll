@@ -18,3 +18,7 @@ Add the following dependencies to your manifest.json:
   }
 }
 ```
+
+# License
+The package is released under the MIT license.
+If you find it useful in a project, crediting me (Aitor Iribar) or the use of the package is appreciated! This is not legally required, mind you, partly because I don't trust myself to write a license of my own.
