@@ -7,7 +7,7 @@ namespace Hairibar.Ragdoll
     /// <summary>
     /// Invokes Collision events for the Ragdoll's bones.
     /// </summary>
-    [AddComponentMenu("Radgoll/Ragdoll Collision Event Dispatcher")]
+    [AddComponentMenu("Ragdoll/Ragdoll Collision Event Dispatcher")]
     [RequireComponent(typeof(RagdollDefinitionBindings))]
     public class RagdollCollisionEventDispatcher : MonoBehaviour
     {
