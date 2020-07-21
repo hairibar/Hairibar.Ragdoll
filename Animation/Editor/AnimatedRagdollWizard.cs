@@ -593,7 +593,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
             {
                 RagdollPowerProfile powerProfile = CreateInstance<RagdollPowerProfile>();
 
-                string path = AssetDatabase.GenerateUniqueAssetPath($"{profileDirectory}ragpow_{definitionName}_Default.asset");
+                string path = AssetDatabase.GenerateUniqueAssetPath($"{profileDirectory}RAGPOW_{definitionName}_Default.asset");
                 AssetDatabase.CreateAsset(powerProfile, path);
 
                 return powerProfile;
@@ -629,7 +629,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
             {
                 RagdollWeightDistribution weightDistribution = CreateInstance<RagdollWeightDistribution>();
 
-                string path = AssetDatabase.GenerateUniqueAssetPath($"{profileDirectory}ragwgt_{definitionName}_Default.asset");
+                string path = AssetDatabase.GenerateUniqueAssetPath($"{profileDirectory}RAGWGT_{definitionName}_Default.asset");
                 AssetDatabase.CreateAsset(weightDistribution, path);
 
                 return weightDistribution;
@@ -664,7 +664,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
             {
                 RagdollAnimationProfile animationProfile = CreateInstance<RagdollAnimationProfile>();
 
-                string path = AssetDatabase.GenerateUniqueAssetPath($"{profileDirectory}raganim_{definitionName}_Default.asset");
+                string path = AssetDatabase.GenerateUniqueAssetPath($"{profileDirectory}RAGANIM_{definitionName}_Default.asset");
                 AssetDatabase.CreateAsset(animationProfile, path);
 
                 return animationProfile;

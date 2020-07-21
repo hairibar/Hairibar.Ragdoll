@@ -7,7 +7,7 @@ namespace Hairibar.Ragdoll
     /// <summary>
     /// Defines how the total weight of the ragdoll is distributed between its bones.
     /// </summary>
-    [CreateAssetMenu(menuName = "Ragdoll/Weight Distribution", fileName = "ragwgt_New", order = 3)]
+    [CreateAssetMenu(menuName = "Ragdoll/Weight Distribution", fileName = "RAGWGT_New", order = 3)]
     public class RagdollWeightDistribution : RagdollProfile
     {
         [SerializeField] WeightDistributionDictionary factors;

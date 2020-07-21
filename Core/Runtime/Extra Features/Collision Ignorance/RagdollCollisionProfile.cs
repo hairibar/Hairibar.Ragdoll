@@ -7,7 +7,7 @@ namespace Hairibar.Ragdoll
     /// <summary>
     /// Allows specific bones to ignore collisions between them, or disabling a bone's collisions altogether.
     /// </summary>
-    [CreateAssetMenu(menuName = "Ragdoll/Collision Profile", fileName = "ragcol_New", order = 2)]
+    [CreateAssetMenu(menuName = "Ragdoll/Collision Profile", fileName = "RAGCOL_New", order = 2)]
     public class RagdollCollisionProfile : RagdollProfile
     {
         #region Serialized Fields

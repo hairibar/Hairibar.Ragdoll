@@ -7,7 +7,7 @@ namespace Hairibar.Ragdoll.Animation
     /// <summary>
     /// Defines animation parameters for a Ragdoll. 
     /// </summary>
-    [CreateAssetMenu(menuName = "Ragdoll/Animation Profile", fileName = "raganim_New", order = 1)]
+    [CreateAssetMenu(menuName = "Ragdoll/Animation Profile", fileName = "RAGANIM_New", order = 1)]
     public class RagdollAnimationProfile : RagdollProfile
     {
         #region Serialized Data

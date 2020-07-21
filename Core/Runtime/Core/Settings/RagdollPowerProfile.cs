@@ -7,7 +7,7 @@ namespace Hairibar.Ragdoll
     /// <summary>
     /// Defines the PowerSetting of each bone in the ragdoll. Used by RagdollSettings.
     /// </summary>
-    [CreateAssetMenu(menuName = "Ragdoll/Power Profile", fileName = "ragpow_New", order = 0)]
+    [CreateAssetMenu(menuName = "Ragdoll/Power Profile", fileName = "RAGPOW_New", order = 0)]
     public class RagdollPowerProfile : RagdollProfile
     {
         [SerializeField] PowerSettingsDictionary settings;
