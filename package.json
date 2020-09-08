@@ -13,7 +13,7 @@
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.imgui": "1.0.0",
     "com.hairibar.naughtyattributes": "2.2.1",
-    "com.hairibar.engineextensions": "1.1.0"
+    "com.hairibar.engineextensions": "1.2.2"
   },
   "changelog": "CHANGELOG.md",
   "keywords": [
