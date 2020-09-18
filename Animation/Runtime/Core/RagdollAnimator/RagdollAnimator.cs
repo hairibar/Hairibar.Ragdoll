@@ -105,6 +105,8 @@ namespace Hairibar.Ragdoll.Animation
             RagdollProfile.ValidateAsInspectorField(currentProfile, Bindings.Definition, true, "A RagdollAnimationProfile must be assigned at RagdollAnimator.");
 
             RagdollSettings = _ragdollBindings.GetComponent<RagdollSettings>();
+
+            InitializeProfileTransitioning();
         }
 
         void Start()
@@ -121,8 +123,6 @@ namespace Hairibar.Ragdoll.Animation
 
             GatherTargetPoseModifiers();
             InitializeTargetPoseModifiers(targetPoseModifiers, animatedPairs);
-
-            InitializeProfileTransitioning();
 
             SnapToTargetPose();
         }
