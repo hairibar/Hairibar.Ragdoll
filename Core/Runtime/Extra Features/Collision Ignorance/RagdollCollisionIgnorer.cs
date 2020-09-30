@@ -55,9 +55,9 @@ namespace Hairibar.Ragdoll
                 Destroy(profileInstance);
             }
 #else
-            if (_settings)
+            if (_profile)
             {
-                ApplySettings(_settings, false);
+                ApplyProfile(_profile, false);
             }
 #endif
             if (_profile)
@@ -72,17 +72,17 @@ namespace Hairibar.Ragdoll
         }
 
 
-        void UseNewProfile(RagdollCollisionProfile newSettings)
+        void UseNewProfile(RagdollCollisionProfile newProfile)
         {
-            if (newSettings)
+            if (newProfile)
             {
-                _profile = newSettings;
+                _profile = newProfile;
                 _profile.OnUpdateValues += OnProfileUpdated;
 #if UNITY_EDITOR
                 profileInstance = Instantiate(_profile);
                 ApplyProfile(profileInstance, true);
 #else
-                ApplySettings(newSettings, true);
+                ApplyProfile(newProfile, true);
 #endif
             }
         }

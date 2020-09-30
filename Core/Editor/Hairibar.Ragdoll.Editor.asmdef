@@ -6,12 +6,14 @@
         "GUID:44b53aafba06ce04a98532eb8d5cf8d9",
         "GUID:01324ef7d01389a46a7e84904ebe0ccd"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": true,
+    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false
