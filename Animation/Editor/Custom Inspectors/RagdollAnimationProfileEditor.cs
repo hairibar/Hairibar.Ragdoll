@@ -43,11 +43,11 @@ namespace Hairibar.Ragdoll.Animation.Editor
             }
 
             NaughtyEditorGUI.DrawHeader("Position Matching");
-            NonLinearSliderDrawer.Draw_Layout(serializedObject.FindProperty("globalPositionAlpha"), 0, 1, NonLinearSliderDrawer.Function.Quadratic(2), 
-                new GUIContent("Global Alpha", 
+            NonLinearSliderDrawer.Draw_Layout(serializedObject.FindProperty("globalPositionAlpha"), 0, 1, NonLinearSliderDrawer.Function.Quadratic(2),
+                new GUIContent("Global Alpha",
                 "Alpha defines the stiffness with which the ragdoll matches the animation. " +
                 "High values will instantly get to the target position, while low values will treat the target position more like a suggestion."));
-            EditorGUILayout.Slider(serializedObject.FindProperty("globalPositionDampingRatio"), 0, 1, 
+            EditorGUILayout.Slider(serializedObject.FindProperty("globalPositionDampingRatio"), 0, 1,
                 new GUIContent("Global Position Damping Ratio", "A damping ratio of 1 will get to the target position perfectly, with no overshooting. " +
                 "Lower values will overshoot the target position."));
 
@@ -271,7 +271,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
         protected override void AssignDragAndDrop(SerializedObject assignTarget)
         {
             Object profile = target;
-            assignTarget.FindProperty("profile").objectReferenceValue = profile;
+            assignTarget.FindProperty("currentProfile").objectReferenceValue = profile;
         }
         #endregion
 
