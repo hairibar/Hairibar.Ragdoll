@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Hairibar.EngineExtensions;
 using UnityEngine;
 
 namespace Hairibar.Ragdoll.Animation.Debug
@@ -9,7 +8,6 @@ namespace Hairibar.Ragdoll.Animation.Debug
     /// </summary>
     [AddComponentMenu("Ragdoll/Target Pose Visualizer")]
     [RequireComponent(typeof(RagdollAnimator))]
-    [RemoveInRelease]
     public class TargetPoseVisualizer : MonoBehaviour, ITargetPoseModifier
     {
         #region Inspector

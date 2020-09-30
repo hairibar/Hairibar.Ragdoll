@@ -9,7 +9,6 @@ namespace Hairibar.Ragdoll.Debug
     /// </summary>
     [AddComponentMenu("Ragdoll/Ragdoll Collider Visualizer")]
     [ExecuteAlways, RequireComponent(typeof(RagdollDefinitionBindings), typeof(RagdollSettings))]
-    [RemoveInRelease]
     public class RagdollColliderVisualizer : MonoBehaviour
     {
         static Material poweredMaterial;
@@ -167,22 +166,28 @@ namespace Hairibar.Ragdoll.Debug
         {
             if (!kinematicMaterial)
             {
-                kinematicMaterial = new Material(Shader.Find("Standard"));
-                kinematicMaterial.color = PowerSetting.Kinematic.GetVisualizationColor();
+                kinematicMaterial = new Material(Shader.Find("Standard"))
+                {
+                    color = PowerSetting.Kinematic.GetVisualizationColor()
+                };
                 kinematicMaterial.SetFloat("_Glossiness", 0);
                 kinematicMaterial.SetFloat("_Metallic", 0);
             }
             if (!poweredMaterial)
             {
-                poweredMaterial = new Material(Shader.Find("Standard"));
-                poweredMaterial.color = PowerSetting.Powered.GetVisualizationColor();
+                poweredMaterial = new Material(Shader.Find("Standard"))
+                {
+                    color = PowerSetting.Powered.GetVisualizationColor()
+                };
                 poweredMaterial.SetFloat("_Glossiness", 0);
                 poweredMaterial.SetFloat("_Metallic", 0);
             }
             if (!unpoweredMaterial)
             {
-                unpoweredMaterial = new Material(Shader.Find("Standard"));
-                unpoweredMaterial.color = PowerSetting.Unpowered.GetVisualizationColor();
+                unpoweredMaterial = new Material(Shader.Find("Standard"))
+                {
+                    color = PowerSetting.Unpowered.GetVisualizationColor()
+                };
                 unpoweredMaterial.SetFloat("_Glossiness", 0);
                 unpoweredMaterial.SetFloat("_Metallic", 0);
             }
