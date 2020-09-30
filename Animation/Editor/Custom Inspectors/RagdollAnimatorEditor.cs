@@ -1,10 +1,9 @@
-﻿using System.Reflection;
-using Hairibar.EngineExtensions.Editor;
+﻿using Hairibar.EngineExtensions.Editor;
+using Hairibar.Ragdoll.Editor;
 using NaughtyAttributes.Editor;
 using UnityEditor;
-using UnityEngine;
 using UnityEditor.ShortcutManagement;
-using Hairibar.Ragdoll.Editor;
+using UnityEngine;
 
 #pragma warning disable 649
 namespace Hairibar.Ragdoll.Animation.Editor
@@ -14,42 +13,34 @@ namespace Hairibar.Ragdoll.Animation.Editor
     {
         const string EDITOR_STATE_DIRECTORY = "Temp/Packages/com.hairibar.ragdoll/EditorState/RagdollAnimator/";
 
-        static bool animatedPoseForcedViaShortcut;
-
         [SerializeField] bool hideMesh;
-        [SerializeField] bool forceAnimatedPose;
 
         bool isInitialized;
 
         SerializedProperty bindingDefinition;
-        FieldInfo forceAnimatedPoseField;
         Animator animator;
 
         #region Global Shortcut
-        [ClutchShortcut("Hairibar.Ragdoll.RagdollAnimator/ForceAnimatedPose", KeyCode.P, ShortcutModifiers.Action, displayName = "Force Animated Pose")]
+        [ClutchShortcut("Hairibar.Ragdoll.RagdollAnimator/ForceTargetPose", KeyCode.P, ShortcutModifiers.Action, displayName = "Force Target Pose")]
         public static void ForceAnimatedPose(ShortcutArguments args)
         {
+            if (!Application.isPlaying) return;
+
             if (args.stage == ShortcutStage.Begin)
             {
-                animatedPoseForcedViaShortcut = true;
                 SetForceAnimatedPoseGlobally(true);
             }
             else if (args.stage == ShortcutStage.End)
             {
-                animatedPoseForcedViaShortcut = false;
                 SetForceAnimatedPoseGlobally(false);
             }
-            
+
 
             void SetForceAnimatedPoseGlobally(bool value)
             {
-                FieldInfo forceAnimatedPoseField = null;
                 foreach (RagdollAnimator ragdollAnimator in FindObjectsOfType<RagdollAnimator>())
                 {
-                    if (forceAnimatedPoseField == null) forceAnimatedPoseField = ReflectionUtility.GetField(ragdollAnimator, "forceAnimatedPose");
-
-                    bool oldValue = (bool) forceAnimatedPoseField.GetValue(ragdollAnimator);
-                    forceAnimatedPoseField.SetValue(ragdollAnimator, value);
+                    ragdollAnimator.forceTargetPose = value;
                 }
             }
         }
@@ -74,11 +65,12 @@ namespace Hairibar.Ragdoll.Animation.Editor
                 "Alpha defines the stiffness with which the ragdoll matches the animation. " +
                 "High values will instantly get to the target pose, while low values will treat the target pose more like a suggestion."));
 
-            EditorGUILayout.Slider(serializedObject.FindProperty("_masterDampingRatio"), 0, 1, 
+            EditorGUILayout.Slider(serializedObject.FindProperty("_masterDampingRatio"), 0, 1,
                 new GUIContent("Master Damping Ratio", "The profile's damping ratio values will be multiplied by this amount. \n" +
                 "A damping ratio of 1 will get to the target pose perfectly, with no overshooting. " +
                 "Lower values will overshoot the target pose."));
 
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("forceTargetPose"));
             NaughtyEditorGUI.DrawHeader("Debug Features (Editor Only)");
             if (serializedObject.isEditingMultipleObjects)
             {
@@ -86,12 +78,10 @@ namespace Hairibar.Ragdoll.Animation.Editor
             }
             else
             {
-                GUILayout.BeginVertical(GUI.skin.box);
-
-                DoHideMeshField();
-                if (!hideMesh) DoForceAnimatedPoseField();
-
-                GUILayout.EndVertical();
+                using (new GUILayout.VerticalScope(GUI.skin.box))
+                {
+                    DoHideMeshField();
+                }
             }
 
             serializedObject.ApplyModifiedProperties();
@@ -101,7 +91,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
         void DrawBindingsField()
         {
             EditorGUI.BeginDisabledGroup(Application.isPlaying);
-            
+
             EditorGUI.BeginChangeCheck();
 
             SerializedProperty bindings = serializedObject.FindProperty("_ragdollBindings");
@@ -129,14 +119,6 @@ namespace Hairibar.Ragdoll.Animation.Editor
             RagdollProfileEditorUtility.ValidateProfileField_Layout(profile, bindingDefinition?.objectReferenceValue as RagdollDefinition, true);
         }
 
-        void DoForceAnimatedPoseField()
-        {
-            if (forceAnimatedPoseField == null) forceAnimatedPoseField = ReflectionUtility.GetField(target, "forceAnimatedPose");
-
-            forceAnimatedPose = EditorGUILayout.Toggle("Force Animated Pose", forceAnimatedPose);
-
-            forceAnimatedPoseField.SetValue(target, animatedPoseForcedViaShortcut || forceAnimatedPose);
-        }
 
         void DoHideMeshField()
         {
@@ -182,7 +164,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
         void OnDisable()
         {
             if (!isInitialized) return;
-            
+
             EditorSerializationUtility.Serialize(EDITOR_STATE_DIRECTORY, this, target);
             isInitialized = false;
         }

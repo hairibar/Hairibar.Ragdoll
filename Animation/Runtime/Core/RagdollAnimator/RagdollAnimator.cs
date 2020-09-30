@@ -48,6 +48,8 @@ namespace Hairibar.Ragdoll.Animation
             get => _masterDampingRatio;
             set => _masterDampingRatio = Mathf.Clamp01(value);
         }
+
+        public bool forceTargetPose = false;
         #endregion
 
         #region Serialized Fields
@@ -87,7 +89,7 @@ namespace Hairibar.Ragdoll.Animation
             ReadAnimatedPose();
 
 #if UNITY_EDITOR
-            if (!forceAnimatedPose) mapper.MapTargetToRagdoll();
+            if (!forceTargetPose) mapper.MapTargetToRagdoll();
 #else
             mapper.MapTargetToRagdoll();
 #endif
