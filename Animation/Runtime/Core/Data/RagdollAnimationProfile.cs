@@ -39,7 +39,7 @@ namespace Hairibar.Ragdoll.Animation
         /// Gets the animator profile for the bone. 
         /// If it has no overrides, the default profile will be returned; even if the bone isn't in the definition.
         /// </summary>
-        internal BoneProfile GetBoneProfile(BoneName boneName, bool isRoot)
+        public BoneProfile GetBoneProfile(BoneName boneName, bool isRoot)
         {
             bool overrideExists = overridenProfiles.TryGetValue(boneName, out BoneProfile returnedProfile);
 
