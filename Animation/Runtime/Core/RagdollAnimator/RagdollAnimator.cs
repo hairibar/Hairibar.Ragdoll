@@ -88,11 +88,10 @@ namespace Hairibar.Ragdoll.Animation
 
             ReadAnimatedPose();
 
-#if UNITY_EDITOR
-            if (!forceTargetPose) mapper.MapTargetToRagdoll();
-#else
-            mapper.MapTargetToRagdoll();
-#endif
+            if (!forceTargetPose)
+            {
+                mapper.MapTargetToRagdoll();
+            }
         }
         #endregion
 
