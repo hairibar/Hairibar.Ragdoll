@@ -1,5 +1,6 @@
 # Hairibar.Ragdoll
 A Unity package for making ragdolls and animating them with keyframed animations.
+See in action at https://youtu.be/ByNPbbACf40.
 
 ## Dependencies
 - [NaughtyAttributes (my personal fork) v2.2.1](https://github.com/hairibar/NaughtyAttributes)
