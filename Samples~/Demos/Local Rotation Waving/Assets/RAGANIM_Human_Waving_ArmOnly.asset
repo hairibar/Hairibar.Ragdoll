@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0ddf45cc3767d46868f844d46c9f21, type: 3}
+  m_Name: RAGANIM_Human_Waving_ArmOnly
+  m_EditorClassIdentifier: 
+  definition: {fileID: 11400000, guid: 840cf89373122a54cb2fe8d8c1ce40f0, type: 2}
+  _isValid: 1
+  globalPositionAlpha: 0
+  globalPositionDampingRatio: 0.7
+  globalMaxLinearAcceleration: Infinity
+  positionMatchingOverrides: []
+  rotationMatchingOverrides:
+  - bone:
+      name: R_Shoulder
+    alpha: 1
+    dampingRatio: 0.077
+  - bone:
+      name: R_ArmUp
+    alpha: 1
+    dampingRatio: 0.077
+  - bone:
+      name: R_ArmDown
+    alpha: 0.861316
+    dampingRatio: 0.077
+  - bone:
+      name: R_Hand
+    alpha: 0.52452385
+    dampingRatio: 0.077
+  - bone:
+      name: Head
+    alpha: 0.55786794
+    dampingRatio: 0.473
+  - bone:
+      name: Neck
+    alpha: 0.5627129
+    dampingRatio: 0.313
+  - bone:
+      name: Spine_Up
+    alpha: 0.18838525
+    dampingRatio: 0.077
+  globalRotationAlpha: 0.04912562
+  globalRotationDampingRatio: 0.077
+  globalMaxAngularAcceleration: Infinity
+  matchRootRotation: 0

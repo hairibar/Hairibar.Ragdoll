@@ -1,0 +1,836 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!54 &719113069
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005011562417886959}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!136 &719113067
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005011562417886959}
+  m_Material: {fileID: 13400000, guid: ebed2fbb3b8ed3142b2f39f3750942b5, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.17
+  m_Height: 0.8770087
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.42008865, z: 0}
+--- !u!114 &719113068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005011562417886959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460673987a8813043a53680b415be88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  rotationSpeed: 60
+  blendTreeDamping: 0.1
+--- !u!114 &620160916437761484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005011562417886959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde2e74e8baec2547a1814ca96197637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1190753561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947065036395467225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22354fe51600f704a85ea0b5f986264b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitionLength: 0.06
+  doStartingTransition: 1
+--- !u!114 &1190753563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947065036395467225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faefadadfc99574438f4efd5f9d77a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 2049
+  softenPositionMatching: 1
+  softenRotationMatching: 0
+  softeningAmount: 1
+  _recoveryTime: 0.5
+--- !u!1001 &3060331992433560534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 42595008, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 4.3185463
+      objectReference: {fileID: 0}
+    - target: {fileID: 42595008, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 42595008, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 42595009, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 4318.5464
+      objectReference: {fileID: 0}
+    - target: {fileID: 42595009, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 259.1128
+      objectReference: {fileID: 0}
+    - target: {fileID: 42595009, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 4318.5464
+      objectReference: {fileID: 0}
+    - target: {fileID: 42595009, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 259.1128
+      objectReference: {fileID: 0}
+    - target: {fileID: 88911579, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 7126.314
+      objectReference: {fileID: 0}
+    - target: {fileID: 88911579, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 427.57886
+      objectReference: {fileID: 0}
+    - target: {fileID: 88911579, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 7126.314
+      objectReference: {fileID: 0}
+    - target: {fileID: 88911579, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 427.57886
+      objectReference: {fileID: 0}
+    - target: {fileID: 88911579, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 8.739543
+      objectReference: {fileID: 0}
+    - target: {fileID: 88911579, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -3.342
+      objectReference: {fileID: 0}
+    - target: {fileID: 88911580, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 7.126314
+      objectReference: {fileID: 0}
+    - target: {fileID: 88911580, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88911580, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 131032871, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 4.1831465
+      objectReference: {fileID: 0}
+    - target: {fileID: 131032871, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 131032871, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 131032872, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 4183.1465
+      objectReference: {fileID: 0}
+    - target: {fileID: 131032872, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 250.98878
+      objectReference: {fileID: 0}
+    - target: {fileID: 131032872, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 4183.1465
+      objectReference: {fileID: 0}
+    - target: {fileID: 131032872, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 250.98878
+      objectReference: {fileID: 0}
+    - target: {fileID: 131032872, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.000000045163915
+      objectReference: {fileID: 0}
+    - target: {fileID: 131032872, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.00286147
+      objectReference: {fileID: 0}
+    - target: {fileID: 206965473, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 1.8314626
+      objectReference: {fileID: 0}
+    - target: {fileID: 206965473, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 206965473, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 209935518, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 5.9362197
+      objectReference: {fileID: 0}
+    - target: {fileID: 209935518, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 209935518, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 209935519, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 5936.2197
+      objectReference: {fileID: 0}
+    - target: {fileID: 209935519, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 356.1732
+      objectReference: {fileID: 0}
+    - target: {fileID: 209935519, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 5936.2197
+      objectReference: {fileID: 0}
+    - target: {fileID: 209935519, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 356.1732
+      objectReference: {fileID: 0}
+    - target: {fileID: 209935519, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.08207773
+      objectReference: {fileID: 0}
+    - target: {fileID: 209935519, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.01599537
+      objectReference: {fileID: 0}
+    - target: {fileID: 428116293, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 2.5725994
+      objectReference: {fileID: 0}
+    - target: {fileID: 428116293, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428116293, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 584500669, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 5.358988
+      objectReference: {fileID: 0}
+    - target: {fileID: 584500669, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 584500669, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 584500670, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 5358.988
+      objectReference: {fileID: 0}
+    - target: {fileID: 584500670, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 321.53928
+      objectReference: {fileID: 0}
+    - target: {fileID: 584500670, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 5358.988
+      objectReference: {fileID: 0}
+    - target: {fileID: 584500670, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 321.53928
+      objectReference: {fileID: 0}
+    - target: {fileID: 621343144, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 4.1403885
+      objectReference: {fileID: 0}
+    - target: {fileID: 621343144, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621343144, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621343145, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 4140.3887
+      objectReference: {fileID: 0}
+    - target: {fileID: 621343145, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 248.42331
+      objectReference: {fileID: 0}
+    - target: {fileID: 621343145, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 4140.3887
+      objectReference: {fileID: 0}
+    - target: {fileID: 621343145, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 248.42331
+      objectReference: {fileID: 0}
+    - target: {fileID: 621343145, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.00000008221326
+      objectReference: {fileID: 0}
+    - target: {fileID: 621343145, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.0028465774
+      objectReference: {fileID: 0}
+    - target: {fileID: 711213579, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 4.6249776
+      objectReference: {fileID: 0}
+    - target: {fileID: 711213579, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 711213579, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 711213580, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 4624.9775
+      objectReference: {fileID: 0}
+    - target: {fileID: 711213580, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 277.49866
+      objectReference: {fileID: 0}
+    - target: {fileID: 711213580, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 4624.9775
+      objectReference: {fileID: 0}
+    - target: {fileID: 711213580, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 277.49866
+      objectReference: {fileID: 0}
+    - target: {fileID: 807671749, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 4.1403885
+      objectReference: {fileID: 0}
+    - target: {fileID: 807671750, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 4140.3887
+      objectReference: {fileID: 0}
+    - target: {fileID: 807671750, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 248.42331
+      objectReference: {fileID: 0}
+    - target: {fileID: 807671750, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 4140.3887
+      objectReference: {fileID: 0}
+    - target: {fileID: 807671750, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 248.42331
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116431801, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 3242.4731
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116431801, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 194.54839
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116431801, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 3242.4731
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116431801, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 194.54839
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116431802, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 3.2424731
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116431802, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116431802, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166939239, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 4.2829146
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166939239, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166939239, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359795096, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 2.700873
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359795097, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 2700.8728
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359795097, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 162.05237
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359795097, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 2700.8728
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359795097, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 162.05237
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570365821, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: _profile
+      value: 
+      objectReference: {fileID: 11400000, guid: ab07a66d1c1e6604da29240e75539396,
+        type: 2}
+    - target: {fileID: 1604641034, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 3057.1887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604641034, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 183.43132
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604641034, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 3057.1887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604641034, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 183.43132
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604641034, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.00000007622324
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604641034, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.029821917
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604641035, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 3.0571887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604641035, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604641035, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741441509, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 6.328167
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741441509, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741441509, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741441510, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 6328.167
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741441510, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 379.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741441510, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 6328.167
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741441510, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 379.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778423679, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 2.8006413
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778423679, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778423679, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820836363, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 2993.0518
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820836363, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 179.5831
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820836363, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 2993.0518
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820836363, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 179.5831
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820836363, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.000000043566033
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820836363, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.029838115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820836364, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 2.9930518
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820836364, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820836364, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841721947, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 5.9861035
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841721947, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841721947, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841721948, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 5986.1035
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841721948, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 359.1662
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841721948, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 5986.1035
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841721948, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 359.1662
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841721948, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.08207801
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841721948, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.015995348
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972999389, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 2.5084627
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972999390, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 2508.4626
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972999390, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 150.50777
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972999390, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_LowAngularXLimit.contactDistance
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972999390, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_HighAngularXLimit.contactDistance
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972999390, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 2508.4626
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972999390, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 150.50777
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972999390, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularZLimit.contactDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002341126, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.spring
+      value: 1867.0942
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002341126, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularXLimitSpring.damper
+      value: 112.02566
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002341126, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.spring
+      value: 1867.0942
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002341126, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_AngularYZLimitSpring.damper
+      value: 112.02566
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002341127, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+      propertyPath: m_Mass
+      value: 1.8670942
+      objectReference: {fileID: 0}
+    - target: {fileID: 286997642496872602, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: radius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 286997642496872602, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: force
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 286997642496872602, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: mass
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 880966882557767843, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444547349914948434, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: currentProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: ecd58c1054881f34fb4ee0a52df33ebe,
+        type: 2}
+    - target: {fileID: 2080795368634692356, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: _ragdollBindings
+      value: 
+      objectReference: {fileID: 8843846661519837956}
+    - target: {fileID: 2080795368634692356, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: currentProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: ecd58c1054881f34fb4ee0a52df33ebe,
+        type: 2}
+    - target: {fileID: 2080795368634692356, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: _masterDampingRatio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597823869032620590, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: _powerProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 9fd730148c23f344cbe55e087a0b4c1c,
+        type: 2}
+    - target: {fileID: 4597823869032620590, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: totalMass
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220077486126803399, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b430d14049f7697479be94c6c1a1488c, type: 2}
+    - target: {fileID: 7638404953153598926, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.342
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614392, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092537229614393, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_Name
+      value: SurvivalCharacter_WalkingAround
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197003, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.15455174
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197003, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.1796396
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197003, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.028590009
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197003, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9710953
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197003, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0731946
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197003, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197003, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.801474
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197004, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197004, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: far clip plane
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002092538401197004, guid: 5968896f63f2edf4d9798ae6da1c5795,
+        type: 3}
+      propertyPath: field of view
+      value: 66
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 570256137, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 5968896f63f2edf4d9798ae6da1c5795, type: 3}
+--- !u!1 &5005011562417886959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8002092537229614393, guid: 5968896f63f2edf4d9798ae6da1c5795,
+    type: 3}
+  m_PrefabInstance: {fileID: 3060331992433560534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8843846661519837956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5819737126315360466, guid: 5968896f63f2edf4d9798ae6da1c5795,
+    type: 3}
+  m_PrefabInstance: {fileID: 3060331992433560534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a282188e3815eeb4e818df3da3ff9829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8947065036395467225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6220077486117444111, guid: 5968896f63f2edf4d9798ae6da1c5795,
+    type: 3}
+  m_PrefabInstance: {fileID: 3060331992433560534}
+  m_PrefabAsset: {fileID: 0}

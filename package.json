@@ -20,5 +20,12 @@
     "Ragdoll",
     "Active Ragdoll",
     "Animation"
+  ],
+  "samples": [
+    {
+      "displayName": "Demo Scenes",
+      "description": "A set of demo scenes that show how the framework might be used for different gameplay scenarios.",
+      "path": "Samples~/Demos"
+    }
   ]
 }

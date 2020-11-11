@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0ddf45cc3767d46868f844d46c9f21, type: 3}
+  m_Name: RAGANIM_Hanging
+  m_EditorClassIdentifier: 
+  definition: {fileID: 11400000, guid: 840cf89373122a54cb2fe8d8c1ce40f0, type: 2}
+  _isValid: 1
+  globalPositionAlpha: 0.0072545293
+  globalPositionDampingRatio: 0.092
+  globalMaxLinearAcceleration: Infinity
+  positionMatchingOverrides:
+  - bone:
+      name: R_ArmDown
+    alpha: 0.106433295
+    dampingRatio: 0.092
+  - bone:
+      name: R_ArmUp
+    alpha: 0.016524825
+    dampingRatio: 0.092
+  - bone:
+      name: L_Hand
+    alpha: 0.060739536
+    dampingRatio: 0.092
+  rotationMatchingOverrides:
+  - bone:
+      name: L_ArmDown
+    alpha: 0.005379324
+    dampingRatio: 0.816
+  - bone:
+      name: L_Hand
+    alpha: 0.46306327
+    dampingRatio: 0.816
+  - bone:
+      name: L_LegUp
+    alpha: 0.044518016
+    dampingRatio: 0.816
+  - bone:
+      name: R_LegUp
+    alpha: 0.054361746
+    dampingRatio: 0.816
+  - bone:
+      name: R_LegDown
+    alpha: 0.04015067
+    dampingRatio: 0.816
+  - bone:
+      name: L_LegDown
+    alpha: 0.0296371
+    dampingRatio: 0.816
+  globalRotationAlpha: 0.29013687
+  globalRotationDampingRatio: 0.816
+  globalMaxAngularAcceleration: Infinity
+  matchRootRotation: 0

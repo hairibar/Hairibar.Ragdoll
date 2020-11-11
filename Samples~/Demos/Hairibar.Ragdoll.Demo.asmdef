@@ -1,0 +1,18 @@
+{
+    "name": "Hairibar.Ragdoll.Demo",
+    "references": [
+        "Hairibar.EngineExtensions",
+        "NaughtyAttributes.Core",
+        "Hairibar.Ragdoll.Core",
+        "Hairibar.Ragdoll.Animation"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
