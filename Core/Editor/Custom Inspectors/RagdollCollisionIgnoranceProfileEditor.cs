@@ -243,11 +243,13 @@ namespace Hairibar.Ragdoll.Editor
 
         protected override void Initialize()
         {
-            bonePairsList = ReorderableListUtility.Create(serializedObject.FindProperty("bonePairs"), false, true, true, true, "Ignored Collision Pairs");
+            bonePairsList = ReorderableListUtility.Create(serializedObject.FindProperty("bonePairs"),
+                draggable: true, displayHeader: true, displayAddButton: true, displayRemoveButton: true, "Ignored Collision Pairs");
             bonePairsList.drawElementCallback = DrawIgnoredPairElement;
             bonePairsList.elementHeightCallback = GetIgnoredPairsElementHeight;
 
-            disabledList = ReorderableListUtility.Create(serializedObject.FindProperty("disabled"), false, true, true, true, "Disabled Collision Bones");
+            disabledList = ReorderableListUtility.Create(serializedObject.FindProperty("disabled"),
+                draggable: true, displayHeader: true, displayAddButton: true, displayRemoveButton: true, "Disabled Collision Bones");
             disabledList.drawElementCallback = DrawDisabledBonesElement;
             disabledList.elementHeightCallback = GetDisabledBonesElementHeight;
 
