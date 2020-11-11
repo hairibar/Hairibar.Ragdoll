@@ -27,7 +27,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
             public RagdollAnimationProfile animationProfile;
         }
 
-        [MenuItem("Ragdoll/Turn Into Animated Ragdoll", false, 1999)]
+        [MenuItem("Tools/Hairibar.Ragdoll/Animated Ragdoll Wizard")]
         public static void CreateWizard()
         {
             RigDuplicationWizard.Display(new Data());
