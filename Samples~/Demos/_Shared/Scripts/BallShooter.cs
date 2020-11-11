@@ -5,7 +5,7 @@ namespace Hairibar.Ragdoll.Demo
 {
     public class BallShooter : MonoBehaviour
     {
-        const string LAYER_NAME = "Default";
+        const string LAYER_NAME = "Balls";
 
         public float radius = 0.2f;
         public float force = 10;
