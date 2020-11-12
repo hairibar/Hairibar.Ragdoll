@@ -34,7 +34,7 @@ Matching position in world space makes *Ragdoll* bones easily line up with the *
 
 Matching rotation in local space allows the *Ragdoll* to attempt to match the *Target* pose, but allows this pose to be deformed by forces, collisions etc. 
 
-![An example of a character with only Rotation Matching vs one with both.](Documentation~\img\LocalSpaceAnimationExample_Waving.jpg)
+![An example of a character with only Rotation Matching vs one with both.](Documentation~/img/LocalSpaceAnimationExample_Waving.jpg)
 **Left**: a character with Position and Rotation Matching. 
 **Right**: a character with only Rotation Matching.
 
@@ -110,7 +110,7 @@ At this point, several components will have been added to the *Target* and the *
 Hairibar.Ragdoll uses a bunch of `ScriptableObjects` (referred to as *Ragdoll Profiles*) to manage configuration in a reusable and swappable way. To refer to specific bones, these profiles use `RagdollDefinitions`. 
 
 A `RagdollDefinition` keeps a list of the bones present in a ragdoll. 
-![An example of a RagdollDefinition for a human character."](Documentation~\img\RagdollDefinition.png)
+![An example of a RagdollDefinition for a human character."](Documentation~/img/RagdollDefinition.png)
 
 Any ragdolls that have this same list of bones can share this `RagdollDefinition`, and thus share any *Ragdoll Profiles*.
 
@@ -139,7 +139,7 @@ Each bone can be in one of three states:
 - **Powered**: the bone is simulated, and Animation Matching forces are applied to it.
 - **Unpowered**: the bone is simulated, but no Animation Matching forces are applied.
 
-![An example RagdollPowerProfile for a character with an injured arm.](Documentation~\img\RagdollPowerProfile.png)
+![An example RagdollPowerProfile for a character with an injured arm.](Documentation~/img/RagdollPowerProfile.png)
 
 ### RagdollWeightDistribution
 Weight distribution can greatly affect how unpowered ragdolls behave. 
