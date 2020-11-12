@@ -4,9 +4,11 @@
   "displayName": "Hairibar.Ragdoll",
   "description": "A framework for making ragdolls and animating them with keyframed animations.",
   "unity": "2019.1",
+
   "author": {
     "name": "Aitor Iribar"
   },
+
   "type": "library",
   "dependencies": {
     "com.unity.modules.physics": "1.0.0",
@@ -15,12 +17,15 @@
     "com.hairibar.naughtyattributes": "2.2.1",
     "com.hairibar.engineextensions": "1.2.2"
   },
-  "changelog": "CHANGELOG.md",
+
+  "documentationUrl": "https://github.com/hairibar/Hairibar.Ragdoll",
+
   "keywords": [
     "Ragdoll",
     "Active Ragdoll",
     "Animation"
   ],
+
   "samples": [
     {
       "displayName": "Demo Scenes",
