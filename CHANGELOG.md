@@ -1,5 +1,18 @@
 # Changelog
 
+# [v1.3.2](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.3.1...v1.3.2)
+
+> 18 February 2021
+
+
+
+
+### Fixes
+
+- Fixed possible NullReferenceException when destroying the ragdoll [`72f80ff`](https://github.com/hairibar/Hairibar.Ragdoll/commit/72f80ff277a125105e7751ed49015426099139cc)
+
+
+
 # [v1.3.1](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.3.0...v1.3.1)
 
 > 18 February 2021
