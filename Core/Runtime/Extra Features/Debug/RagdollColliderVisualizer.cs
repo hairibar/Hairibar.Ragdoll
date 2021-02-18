@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Hairibar.EngineExtensions;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Hairibar.Ragdoll.Debug
 {
@@ -166,30 +167,26 @@ namespace Hairibar.Ragdoll.Debug
         {
             if (!kinematicMaterial)
             {
-                kinematicMaterial = new Material(Shader.Find("Standard"))
-                {
-                    color = PowerSetting.Kinematic.GetVisualizationColor()
-                };
-                kinematicMaterial.SetFloat("_Glossiness", 0);
-                kinematicMaterial.SetFloat("_Metallic", 0);
+                kinematicMaterial = CreateMaterial(PowerSetting.Kinematic.GetVisualizationColor());
             }
             if (!poweredMaterial)
             {
-                poweredMaterial = new Material(Shader.Find("Standard"))
-                {
-                    color = PowerSetting.Powered.GetVisualizationColor()
-                };
-                poweredMaterial.SetFloat("_Glossiness", 0);
-                poweredMaterial.SetFloat("_Metallic", 0);
+                poweredMaterial = CreateMaterial(PowerSetting.Powered.GetVisualizationColor());
             }
             if (!unpoweredMaterial)
             {
-                unpoweredMaterial = new Material(Shader.Find("Standard"))
+                unpoweredMaterial = CreateMaterial(PowerSetting.Unpowered.GetVisualizationColor());
+            }
+
+
+            Material CreateMaterial(Color color)
+            {
+                Shader defaultShader = GraphicsSettings.currentRenderPipeline ? GraphicsSettings.currentRenderPipeline.defaultShader : Shader.Find("Standard");
+
+                return new Material(defaultShader)
                 {
-                    color = PowerSetting.Unpowered.GetVisualizationColor()
+                    color = color
                 };
-                unpoweredMaterial.SetFloat("_Glossiness", 0);
-                unpoweredMaterial.SetFloat("_Metallic", 0);
             }
         }
 
