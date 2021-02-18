@@ -213,7 +213,10 @@ namespace Hairibar.Ragdoll.Animation
 
             foreach (AnimatedPair pair in animatedPairs)
             {
-                SetUnpoweredJointDrive(pair);
+                if (pair.RagdollBone.Joint)
+                {
+                    SetUnpoweredJointDrive(pair);
+                }
             }
         }
         #endregion
