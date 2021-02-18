@@ -12,8 +12,9 @@
     "com.unity.modules.physics": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.imgui": "1.0.0",
-    "com.hairibar.naughtyattributes": "2.2.1",
-    "com.hairibar.engineextensions": "1.2.2"
+    "com.dbrizov.naughtyattributes": "2.0.7",
+    "com.hairibar.engineextensions": "2.2.0",
+    "com.hairibar.naughtyextensions": "1.3.0"
   },
   "documentationUrl": "https://github.com/hairibar/Hairibar.Ragdoll",
   "keywords": [

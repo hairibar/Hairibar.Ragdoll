@@ -2,6 +2,7 @@
     "name": "Hairibar.Ragdoll.Core",
     "references": [
         "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:fc117992b59284948b0ffc367fc862ec",
         "GUID:5670adaad8cd0454ca2553b97099322f"
     ],
     "includePlatforms": [],

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 using Hairibar.EngineExtensions.Editor;
+using Hairibar.NaughtyExtensions.Editor;
 using Hairibar.Ragdoll.Editor;
 using NaughtyAttributes.Editor;
 using UnityEditor;
@@ -42,8 +43,8 @@ namespace Hairibar.Ragdoll.Animation.Editor
                 NaughtyEditorGUI.HelpBox_Layout("You can assign a definition to be able to override individual bones.", MessageType.Info);
             }
 
-            NaughtyEditorGUI.DrawHeader("Position Matching");
-            NonLinearSliderDrawer.Draw_Layout(serializedObject.FindProperty("globalPositionAlpha"), 0, 1, NonLinearSliderDrawer.Function.Quadratic(2),
+            ExtraNaughtyEditorGUILayout.Header("Position Matching");
+            NonLinearSliderDrawer.Draw_Layout(serializedObject.FindProperty("globalPositionAlpha"), 0, 1, QuadraticSliderDrawer.GetQuadraticFunction(2),
                 new GUIContent("Global Alpha",
                 "Alpha defines the stiffness with which the ragdoll matches the animation. " +
                 "High values will instantly get to the target position, while low values will treat the target position more like a suggestion."));
@@ -64,9 +65,9 @@ namespace Hairibar.Ragdoll.Animation.Editor
             WarnAgainstUnstablePositionMatchingParameters();
 
 
-            NaughtyEditorGUI.DrawHeader("Rotation Matching");
+            ExtraNaughtyEditorGUILayout.Header("Rotation Matching");
             EditorGUILayout.PropertyField(serializedObject.FindProperty("matchRootRotation"));
-            NonLinearSliderDrawer.Draw_Layout(serializedObject.FindProperty("globalRotationAlpha"), 0, 1, NonLinearSliderDrawer.Function.Quadratic(2),
+            NonLinearSliderDrawer.Draw_Layout(serializedObject.FindProperty("globalRotationAlpha"), 0, 1, QuadraticSliderDrawer.GetQuadraticFunction(2),
                 new GUIContent("Global Rotation Alpha",
                 "Alpha defines the stiffness with which the ragdoll matches the animation. " +
                 "High values will instantly get to the target rotation, while low values will treat the target rotation more like a suggestion."));

@@ -1,7 +1,7 @@
-﻿using NaughtyAttributes.Editor;
+﻿using Hairibar.NaughtyExtensions.Editor;
+using Hairibar.Ragdoll.Editor;
 using UnityEditor;
 using UnityEngine;
-using Hairibar.Ragdoll.Editor;
 
 namespace Hairibar.Ragdoll.Animation.Editor
 {
@@ -29,7 +29,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
             BoneNamePopupDrawer.Draw(controlRect, property.FindPropertyRelative("bone.name"), currentDefinition, GUIContent.none);
             AdvanceOneLine();
 
-            NonLinearSliderDrawer.Draw(controlRect, property.FindPropertyRelative("alpha"), 0, 1, NonLinearSliderDrawer.Function.Quadratic(2));
+            NonLinearSliderDrawer.Draw(controlRect, property.FindPropertyRelative("alpha"), 0, 1, QuadraticSliderDrawer.GetQuadraticFunction(2));
             AdvanceOneLine();
 
             EditorGUI.Slider(controlRect, property.FindPropertyRelative("dampingRatio"), 0, 1);

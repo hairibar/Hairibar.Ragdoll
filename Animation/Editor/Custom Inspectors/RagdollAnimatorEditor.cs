@@ -1,4 +1,5 @@
 ﻿using Hairibar.EngineExtensions.Editor;
+using Hairibar.NaughtyExtensions.Editor;
 using Hairibar.Ragdoll.Editor;
 using NaughtyAttributes.Editor;
 using UnityEditor;
@@ -52,15 +53,15 @@ namespace Hairibar.Ragdoll.Animation.Editor
 
             DrawBindingsField();
 
-            NaughtyEditorGUI.DrawHeader("Animation Parameters");
+            ExtraNaughtyEditorGUILayout.Header("Animation Parameters");
             DrawProfileField();
             ClampedFloatDrawer.Draw_Layout(serializedObject.FindProperty("_profileTransitionLength"),
                 new GUIContent("Profile Transition Length",
                 "When changing profile, a blend transition will be done. This is the length of that transition."),
                 0, Mathf.Infinity);
 
-            NaughtyEditorGUI.DrawHeader("Master controls");
-            NonLinearSliderDrawer.Draw_Layout(serializedObject.FindProperty("_masterAlpha"), 0, 1, NonLinearSliderDrawer.Function.Quadratic(2),
+            ExtraNaughtyEditorGUILayout.Header("Master controls");
+            NonLinearSliderDrawer.Draw_Layout(serializedObject.FindProperty("_masterAlpha"), 0, 1, QuadraticSliderDrawer.GetQuadraticFunction(2),
                 new GUIContent("Master Alpha", "The profile's alpha values will be multiplied by this amount. \n" +
                 "Alpha defines the stiffness with which the ragdoll matches the animation. " +
                 "High values will instantly get to the target pose, while low values will treat the target pose more like a suggestion."));
@@ -71,7 +72,7 @@ namespace Hairibar.Ragdoll.Animation.Editor
                 "Lower values will overshoot the target pose."));
 
             EditorGUILayout.PropertyField(serializedObject.FindProperty("forceTargetPose"));
-            NaughtyEditorGUI.DrawHeader("Debug Features (Editor Only)");
+            ExtraNaughtyEditorGUILayout.Header("Debug Features (Editor Only)");
             if (serializedObject.isEditingMultipleObjects)
             {
                 NaughtyEditorGUI.HelpBox_Layout("Multiple object editing isn't supported for debug features.", MessageType.Info, logToConsole: false);

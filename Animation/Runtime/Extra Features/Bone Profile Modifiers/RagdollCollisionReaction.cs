@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Hairibar.EngineExtensions;
-using NaughtyAttributes;
+using Hairibar.NaughtyExtensions;
 using UnityEngine;
 
 namespace Hairibar.Ragdoll.Animation

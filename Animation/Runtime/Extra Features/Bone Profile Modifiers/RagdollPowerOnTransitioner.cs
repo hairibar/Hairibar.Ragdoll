@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using NaughtyAttributes;
+using Hairibar.NaughtyExtensions;
 using UnityEngine;
 
 namespace Hairibar.Ragdoll.Animation

@@ -1,4 +1,5 @@
-﻿using NaughtyAttributes;
+﻿using Hairibar.NaughtyExtensions;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace Hairibar.Ragdoll

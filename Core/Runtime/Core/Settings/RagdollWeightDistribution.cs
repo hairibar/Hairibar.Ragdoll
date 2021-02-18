@@ -1,4 +1,5 @@
-﻿using NaughtyAttributes.Serialization;
+﻿using Hairibar.EngineExtensions.Serialization;
+using NaughtyAttributes;
 using UnityEngine;
 
 #pragma warning disable 649

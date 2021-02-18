@@ -1,4 +1,4 @@
-﻿using NaughtyAttributes.Editor;
+﻿using Hairibar.NaughtyExtensions.Editor;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;

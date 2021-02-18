@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using NaughtyAttributes.Serialization;
+﻿using Hairibar.EngineExtensions.Serialization;
+using UnityEngine;
 
 #pragma warning disable 649
 namespace Hairibar.Ragdoll

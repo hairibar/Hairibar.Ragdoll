@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NaughtyAttributes.Serialization;
+using Hairibar.EngineExtensions.Serialization;
 using UnityEngine;
 
 #pragma warning disable 649

@@ -1,4 +1,4 @@
-﻿using NaughtyAttributes;
+﻿using Hairibar.NaughtyExtensions;
 using UnityEngine;
 
 #pragma warning disable 649

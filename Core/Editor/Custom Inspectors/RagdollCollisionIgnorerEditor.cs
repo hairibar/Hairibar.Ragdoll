@@ -1,4 +1,4 @@
-﻿using NaughtyAttributes.Editor;
+﻿using Hairibar.NaughtyExtensions.Editor;
 using UnityEditor;
 
 namespace Hairibar.Ragdoll.Editor

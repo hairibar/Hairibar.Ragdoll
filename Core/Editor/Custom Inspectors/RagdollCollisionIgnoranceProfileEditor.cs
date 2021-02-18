@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Hairibar.EngineExtensions.Editor;
+using Hairibar.NaughtyExtensions.Editor;
 using NaughtyAttributes.Editor;
 using UnityEditor;
 using UnityEditorInternal;
