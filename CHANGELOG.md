@@ -1,5 +1,18 @@
 # Changelog
 
+# [v1.3.1](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.3.0...v1.3.1)
+
+> 18 February 2021
+
+
+
+
+### Fixes
+
+- Take render pipeline into account when creating materials for RagdollColliderVisualizer [`81c55c0`](https://github.com/hairibar/Hairibar.Ragdoll/commit/81c55c0fbcf905676225c689b42e55cd2165ab87)
+
+
+
 # [v1.3.0](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.2.1...v1.3.0)
 
 > 18 February 2021
