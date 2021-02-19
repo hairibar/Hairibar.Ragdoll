@@ -1,5 +1,18 @@
 # Changelog
 
+# [v1.4.0](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.3.3...v1.4.0)
+
+> 19 February 2021
+
+
+
+### New Features
+
+- Made RagdollAnimator.SnapToTargetPose() public [`ade603d`](https://github.com/hairibar/Hairibar.Ragdoll/commit/ade603de657b173204cde7fde597a01c317b9c4a)
+
+
+
+
 # [v1.3.3](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.3.2...v1.3.3)
 
 > 19 February 2021
