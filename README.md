@@ -253,7 +253,7 @@ Add the following dependencies to your manifest.json:
     ...
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#v2.0.7",
     "com.hairibar.naughtyextensions": "https://github.com/hairibar/Hairibar.NaughtyExtensions.git#v1.3.0",
-    "com.hairibar.engineextensions": "https://github.com/hairibar/Hairibar.EngineExtensions.git#v2.2.0",
+    "com.hairibar.engineextensions": "https://github.com/hairibar/Hairibar.EngineExtensions.git#v2.3.0",
     "com.hairibar.ragdoll": "https://github.com/hairibar/Hairibar.Ragdoll.git#upm"
     ...
   }
