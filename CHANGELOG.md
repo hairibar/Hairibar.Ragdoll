@@ -1,5 +1,18 @@
 # Changelog
 
+# [v1.4.1](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.4.0...v1.4.1)
+
+> 19 February 2021
+
+
+
+
+### Fixes
+
+- Dealt with some weird ConfigurableJoint behaviour when reenabling a ragdoll [`a57e6d1`](https://github.com/hairibar/Hairibar.Ragdoll/commit/a57e6d16c915722625514ff06f68b5e6613b731e)
+
+
+
 # [v1.4.0](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.3.3...v1.4.0)
 
 > 19 February 2021

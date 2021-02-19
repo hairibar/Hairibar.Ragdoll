@@ -1,6 +1,6 @@
 {
   "name": "com.hairibar.ragdoll",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "displayName": "Hairibar.Ragdoll",
   "description": "A framework for making ragdolls and animating them with keyframed animations.",
   "unity": "2019.1",
