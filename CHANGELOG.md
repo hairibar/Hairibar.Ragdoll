@@ -1,5 +1,21 @@
 # Changelog
 
+# [v1.3.3](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.3.2...v1.3.3)
+
+> 19 February 2021
+
+
+
+
+### Fixes
+
+- Fixed possible NullReferenceException in RagdollCollisionEventDispatcher [`14a3ff8`](https://github.com/hairibar/Hairibar.Ragdoll/commit/14a3ff890866c69c12da5da6ae646da08c540a90)
+
+### Documentation
+
+- Updated README install instructions [`89fcbe0`](https://github.com/hairibar/Hairibar.Ragdoll/commit/89fcbe0e908c458fac6263de6141bb05deb8d7cf)
+
+
 # [v1.3.2](https://github.com/hairibar/Hairibar.Ragdoll/compare/v1.3.1...v1.3.2)
 
 > 18 February 2021
