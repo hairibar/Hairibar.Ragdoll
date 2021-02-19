@@ -191,10 +191,10 @@ namespace Hairibar.Ragdoll.Animation
         #endregion
 
         #region State Change Operations
-        void SnapToTargetPose()
+        public void SnapToTargetPose()
         {
             if (animatedPairs is null) return;
-            
+
             foreach (AnimatedPair pair in animatedPairs)
             {
                 Rigidbody rb = pair.RagdollBone.Rigidbody;

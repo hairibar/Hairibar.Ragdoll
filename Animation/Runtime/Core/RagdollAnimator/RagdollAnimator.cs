@@ -10,7 +10,7 @@ namespace Hairibar.Ragdoll.Animation
     [AddComponentMenu("Ragdoll/Ragdoll Animator"), DisallowMultipleComponent]
     public partial class RagdollAnimator : MonoBehaviour
     {
-        #region Public API
+        #region Public Properties
         public RagdollAnimationProfile Profile
         {
             get => currentProfile;
