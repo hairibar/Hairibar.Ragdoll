@@ -169,7 +169,7 @@ namespace Hairibar.Ragdoll
         {
             //Initialize in OnEnable instead of Awake to support fast enter play mode.
             //When not reloading the scene, [ExecuteAlways] scripts won't have Awake called.
-            if (Application.isPlaying && !_definition)
+            if (Application.IsPlaying(this) && !_definition)
             {
                 enabled = false;
                 throw new UnassignedReferenceException("No RagdollDefinition was assigned.");
@@ -179,6 +179,13 @@ namespace Hairibar.Ragdoll
             {
                 IsInitialized = TryCreateRagdollBones();
                 if (IsInitialized) OnBonesCreated?.Invoke();
+            }
+            else
+            {
+                foreach (RagdollBone bone in Bones)
+                {
+                    bone.ResetJointAxisOnEnable();
+                }
             }
         }
 

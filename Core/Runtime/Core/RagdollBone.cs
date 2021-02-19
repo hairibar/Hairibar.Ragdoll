@@ -93,6 +93,18 @@ namespace Hairibar.Ragdoll
         #endregion
 
 
+        /// <summary>
+        /// At OnEnable(), joints do some weird re-configuring. This method, if called from OnEnable(), deals with that.
+        /// </summary>
+        internal void ResetJointAxisOnEnable()
+        {
+            // https://forum.unity.com/threads/hinge-joint-limits-resets-on-activate-object.483481/#post-5713138
+            Quaternion originalRotation = Transform.localRotation;
+            Transform.localRotation = StartingJointRotation;
+            Joint.axis = Joint.axis;    // Yes, this is intentional. The axis setter triggers some calculations that we need.
+            Transform.localRotation = originalRotation;
+        }
+
         public override string ToString()
         {
             return Name.ToString();
