@@ -18,8 +18,8 @@ namespace Hairibar.Ragdoll
         public event CollisionEventListener OnCollisionExit;
 
 
-        Dictionary<Rigidbody, RagdollBone> bones;
-        CollisionEventDispatcher[] dispatchers;
+        Dictionary<CollisionEventDispatcher, RagdollBone> bones;
+
 
         #region Initialization
         void Start()
@@ -30,38 +30,24 @@ namespace Hairibar.Ragdoll
 
         void Initialize()
         {
-            InitializeDictionary();
-            SetUpCollisionEventDispatchers(bones.Keys);
+            SetUpCollisionEventDispatchers();
         }
 
-        void InitializeDictionary()
+
+        void SetUpCollisionEventDispatchers()
         {
             RagdollDefinitionBindings bindings = GetComponent<RagdollDefinitionBindings>();
-            bones = new Dictionary<Rigidbody, RagdollBone>();
+            bones = new Dictionary<CollisionEventDispatcher, RagdollBone>();
 
             foreach (RagdollBone bone in bindings.Bones)
             {
-                bones.Add(bone.Rigidbody, bone);
+                bones.Add(SetUpCollisionEventDispatcher(bone), bone);
             }
         }
 
-        void SetUpCollisionEventDispatchers(IReadOnlyCollection<Rigidbody> rigidbodies)
+        CollisionEventDispatcher SetUpCollisionEventDispatcher(RagdollBone bone)
         {
-            dispatchers = new CollisionEventDispatcher[rigidbodies.Count];
-
-            int i = 0;
-            foreach (Rigidbody rigidbody in rigidbodies)
-            {
-                CollisionEventDispatcher dispatcher = SetUpCollisionEventDispatcher(rigidbody);
-
-                dispatchers[i] = dispatcher;
-                i++;
-            }
-        }
-
-        CollisionEventDispatcher SetUpCollisionEventDispatcher(Rigidbody rigidbody)
-        {
-            CollisionEventDispatcher dispatcher = rigidbody.gameObject.AddComponent<CollisionEventDispatcher>();
+            CollisionEventDispatcher dispatcher = bone.Rigidbody.gameObject.AddComponent<CollisionEventDispatcher>();
 
             dispatcher.OnCollisionEntered += DispatchOnCollisionEnter;
             dispatcher.OnCollisionStayed += DispatchOnCollisionStay;
@@ -72,35 +58,28 @@ namespace Hairibar.Ragdoll
         #endregion
 
         #region Dispatchers
-        void DispatchOnCollisionEnter(Collision collision)
+        void DispatchOnCollisionEnter(Collision collision, CollisionEventDispatcher dispatcher)
         {
-            OnCollisionEnter?.Invoke(collision, GetCollidingBone(collision));
+            OnCollisionEnter?.Invoke(collision, bones[dispatcher]);
         }
 
-        void DispatchOnCollisionStay(Collision collision)
+        void DispatchOnCollisionStay(Collision collision, CollisionEventDispatcher dispatcher)
         {
-            OnCollisionStay?.Invoke(collision, GetCollidingBone(collision));
+            OnCollisionStay?.Invoke(collision, bones[dispatcher]);
         }
 
-        void DispatchOnCollisionExit(Collision collision)
+        void DispatchOnCollisionExit(Collision collision, CollisionEventDispatcher dispatcher)
         {
-            OnCollisionExit?.Invoke(collision, GetCollidingBone(collision));
+            OnCollisionExit?.Invoke(collision, bones[dispatcher]);
         }
         #endregion
-
-        RagdollBone GetCollidingBone(Collision collision)
-        {
-            Rigidbody rigidbody = collision.GetContact(0).thisCollider.attachedRigidbody;
-            RagdollBone bone = bones[rigidbody];
-            return bone;
-        }
 
 
         void OnDestroy()
         {
-            if (dispatchers is null) return;
+            if (bones == null) return;
 
-            foreach (CollisionEventDispatcher dispatcher in dispatchers)
+            foreach (CollisionEventDispatcher dispatcher in bones.Keys)
             {
                 if (dispatcher) Destroy(dispatcher);
             }
