@@ -263,9 +263,10 @@ Add the following dependencies to your manifest.json:
 This snippet will import Hairibar.Ragdoll and its dependencies to your project. For this to work, Git must be added to your system PATH (which is probably already the case).
 
 ## Dependencies
-This package has two dependencies:
-- [NaughtyAttributes (my personal fork) v2.2.1](https://github.com/hairibar/NaughtyAttributes)
-- [Hairibar.EngineExtensions v1.2.2](https://github.com/hairibar/Hairibar.EngineExtensions)
+This package has three dependencies:
+- [NaughtyAttributes v2.0.7](https://github.com/dbrizov/NaughtyAttributes)
+- [Hairibar.NaughtyExtensions v1.3.0](https://github.com/hairibar/Hairibar.NaughtyExtensions)
+- [Hairibar.EngineExtensions v2.3.0](https://github.com/hairibar/Hairibar.EngineExtensions)
 
 ## Importing the samples
 After importing Hairibar.Ragdoll, find it in the package manager. There will be an "Import into project" button in the "Samples" section.
